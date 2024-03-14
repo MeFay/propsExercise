@@ -1,25 +1,24 @@
-import React from "react";
 import { StyledStudentDiv, StyledStudent } from "./Styles.ts";
+import { FC } from "react";
 
-interface Props {
+type StudentProps = {
   name: string;
   age: number;
   isStudent: boolean;
-}
+};
 
-const Student: React.FC<Props> = (props) => {
+const Student: FC<StudentProps> = ({
+  name = "Guest",
+  age = 0,
+  isStudent = false,
+}) => {
   return (
     <StyledStudentDiv>
-      <StyledStudent>Name: {props.name}</StyledStudent>
-      <StyledStudent>Age: {props.age}</StyledStudent>
-      <StyledStudent>Student: {props.isStudent ? "Yes" : "No"}</StyledStudent>
+      <StyledStudent>Name: {name}</StyledStudent>
+      <StyledStudent>Age: {age}</StyledStudent>
+      <StyledStudent>Student: {isStudent ? "Yes" : "No"}</StyledStudent>
     </StyledStudentDiv>
   );
 };
 
-Student.defaultProps = {
-  name: "Guest",
-  age: 0,
-  isStudent: false,
-};
 export default Student;

@@ -6,9 +6,9 @@ export const StyledStudentDiv = styled.div`
   align-items: center;
   gap: 5px;
   min-width: 300px;
-  border: 1px solid turquoise;
-  font-size: 18px;
   padding: 50px 10px;
+  font-size: 18px;
+  border: 3px solid turquoise;
   color: black;
   background-color: white;
 `;
