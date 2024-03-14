@@ -1,5 +1,5 @@
-import { StyledStudentDiv, StyledStudent } from "./Styles.ts";
 import { FC } from "react";
+import { StyledStudentDiv, StyledStudent } from "./Styles.ts";
 
 type StudentProps = {
   name: string;
